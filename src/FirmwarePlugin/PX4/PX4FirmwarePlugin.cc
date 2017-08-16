@@ -48,6 +48,8 @@ const char* PX4FirmwarePlugin::offboardFlightMode =     "Offboard";
 const char* PX4FirmwarePlugin::stabilizedFlightMode =   "Stabilized";
 const char* PX4FirmwarePlugin::rattitudeFlightMode =    "Rattitude";
 const char* PX4FirmwarePlugin::followMeFlightMode =     "Follow Me";
+const char* PX4FirmwarePlugin::voliroAutoFlightMode =    "Voliro Auto";
+const char* PX4FirmwarePlugin::voliroManualFlightMode =  "Voliro Manual";
 
 const char* PX4FirmwarePlugin::rtgsFlightMode =         "Return to Groundstation";
 
@@ -68,6 +70,8 @@ static const struct Modes2Name rgModes2Name[] = {
     { PX4_CUSTOM_MAIN_MODE_AUTO,        PX4_CUSTOM_SUB_MODE_AUTO_RTL,           PX4FirmwarePlugin::rtlFlightMode,           true,   true,   true },
     { PX4_CUSTOM_MAIN_MODE_AUTO,        PX4_CUSTOM_SUB_MODE_AUTO_FOLLOW_TARGET, PX4FirmwarePlugin::followMeFlightMode,      true,   true,   true },
     { PX4_CUSTOM_MAIN_MODE_OFFBOARD,    0,                                      PX4FirmwarePlugin::offboardFlightMode,      true,   true,   true },
+    { PX4_CUSTOM_MAIN_MODE_VOL_AUTO,    0,                                      PX4FirmwarePlugin::voliroAutoFlightMode,    true,   true,   true },
+    { PX4_CUSTOM_MAIN_MODE_VOL_MANUAL,  0,                                      PX4FirmwarePlugin::voliroManualFlightMode,  true,   true,   true },
     // modes that can't be directly set by the user
     { PX4_CUSTOM_MAIN_MODE_AUTO,        PX4_CUSTOM_SUB_MODE_AUTO_LAND,          PX4FirmwarePlugin::landingFlightMode,       false,  true,   true },
     { PX4_CUSTOM_MAIN_MODE_AUTO,        PX4_CUSTOM_SUB_MODE_AUTO_READY,         PX4FirmwarePlugin::readyFlightMode,         false,  true,   true },

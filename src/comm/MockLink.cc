@@ -77,7 +77,7 @@ MockLink::MockLink(SharedLinkConfigurationPointer& config)
     union px4_custom_mode   px4_cm;
 
     px4_cm.data = 0;
-    px4_cm.main_mode = PX4_CUSTOM_MAIN_MODE_MANUAL;
+    px4_cm.main_mode = PX4_CUSTOM_MAIN_MODE_VOL_MANUAL;
     _mavCustomMode = px4_cm.data;
 
     _fileServer = new MockLinkFileServer(_vehicleSystemId, _vehicleComponentId, this);
